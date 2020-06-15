@@ -48,14 +48,14 @@ const getMinuteString = (minute) => {
         return Multiples[minute / 10 - 1];
     // Single digit for minute, like 1, 2 or 3
     } else if (minute < 10) {
-        return Digits[minute - 1];
+        return Digits[minute];
     } else if (minute > 10 && minute < 20){
             // when minute is 10 - 19 inclusive
             return Tens[minute % 10];
     } else {
         // final condition when the minute involves two strings
         let string1 = Multiples[Math.floor(minute / 10 - 1)];
-        let string2 = Digits[minute % 10 - 1];
+        let string2 = Digits[minute % 10];
         return [string1, string2].join(" ");
     }
 }
