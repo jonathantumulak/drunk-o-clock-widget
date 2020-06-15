@@ -28,7 +28,7 @@ const SwearDayWrapper = styled("div")`
 ;
 const getHourAsString = (hour) => {
     // Check the current hr and get a String
-    return Digits[(hour % 12) - 1];
+    return Digits[hour % 12];
 }
 
 const getAppropriateSaying = (prevMinute, minute, currentSaying) => {
